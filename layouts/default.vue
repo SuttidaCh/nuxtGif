@@ -1,28 +1,17 @@
 <template>
-  <v-app dark>
-    <v-app-bar :clipped-left="clipped" fixed app>
+  <v-app>
+    <v-app-bar :clipped-left="clipped" fixed app color="#BCAE90">
       <v-toolbar-title v-text="title" />
       <v-spacer />
       <v-btn class="ma-1" outlined colors="indigo" to="/home">Home</v-btn>
-      <v-btn class="ma-1" outlined colors="indigo" to="/detail">Detail</v-btn>
     </v-app-bar>
     <v-main>
       <v-container>
         <nuxt />
       </v-container>
     </v-main>
-    <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light> mdi-repeat </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
     <v-footer :absolute="!fixed" app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+      <span>&copy; HBD TO PARK JIMIN BTS 🌈🌈🌈</span>
     </v-footer>
   </v-app>
 </template>
@@ -36,7 +25,6 @@ export default {
       fixed: false,
       miniVariant: false,
       right: true,
-      rightDrawer: false,
       title: 'Giphy',
     }
   },
